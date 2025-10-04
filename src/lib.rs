@@ -1,3 +1,5 @@
 mod vector;
 #[cfg(test)]
-mod vector_test;
+mod tests {
+    mod vector_test;
+}

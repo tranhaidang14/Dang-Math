@@ -33,7 +33,7 @@ fn sub_bad() {
 
 #[test]
 #[allow(non_snake_case)]
-fn dot_mul_good() {
+fn dot_prod_good() {
     let vA: Vector = Vector::from(vec![0, 1, 2]);
     let vB: Vector = Vector::from(vec![1, 3, 4]);
 
@@ -44,7 +44,7 @@ fn dot_mul_good() {
 #[test]
 #[should_panic]
 #[allow(non_snake_case)]
-fn dot_mul_bad() {
+fn dot_prod_bad() {
     let vA: Vector = Vector::new(2);
     let vB: Vector = Vector::new(3);
 
@@ -52,6 +52,15 @@ fn dot_mul_bad() {
     dbg!(vR);
 }
 
+#[test]
+#[allow(non_snake_case)]
+fn scalar_mul_good() {
+    let vA: Vector = Vector::from(vec![0, 1, 2]);
+
+    let vR: Vector = Vector::from(vec![0, 3, 6]);
+
+    assert_eq!(3. * vA, vR);
+}
 
 #[test]
 #[allow(non_snake_case)]
